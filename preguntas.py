@@ -74,14 +74,14 @@ def pregunta_01():
     y = df.type.values
 
     # Asigne una copia del dataframe `df` a la variable `X`.
-    X = df.cpoy(True)
+    X = df.copy(True)
 
     # Remueva la columna `type` del DataFrame `X`.
     X.drop(labels=['type'],axis=1,inplace=True)
 
     # Retorne `X` y `y`
     return X, y
-pregunta_01()
+
 
 def pregunta_02():
     """
