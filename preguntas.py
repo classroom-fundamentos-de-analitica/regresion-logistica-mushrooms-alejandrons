@@ -68,16 +68,16 @@ def pregunta_01():
 
     # Remueva la columna `veil-type` del DataFrame `df`.
     # Esta columna tiene un valor constante y no sirve para la detección de hongos.
-    df.drop(labels=['veil_type'],axis=1,inplace=True)
+    df.drop(columns=['veil_type'],axis=1,inplace=True)
 
     # Asigne la columna `type` a la variable `y`.
-    y = df.type.values
+    y = df.type
 
     # Asigne una copia del dataframe `df` a la variable `X`.
     X = df.copy(True)
 
     # Remueva la columna `type` del DataFrame `X`.
-    X.drop(labels=['type'],axis=1,inplace=True)
+    X.drop(columns=['type'],axis=1,inplace=True)
 
     # Retorne `X` y `y`
     return X, y
